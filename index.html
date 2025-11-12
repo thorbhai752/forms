@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Be Part of Antihack!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f5;
+            font-family: 'Roboto', sans-serif;
+            padding: 20px 10px;
+        }
+        .form-container {
+            max-width: 650px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-top: 10px solid #673ab7;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        .header-section { padding: 24px; padding-bottom: 16px; }
+        .question-card {
+            padding: 24px; margin-bottom: 16px;
+            border: 1px solid #dadce0; border-radius: 8px;
+        }
+        .question-title {
+            font-size: 1.1em; font-weight: 500; color: #202124;
+            margin-bottom: 12px;
+        }
+        input[type="text"] {
+            border: none; border-bottom: 1px solid #dadce0;
+            width: 100%; padding: 8px 0; font-size: 1em;
+            outline: none; transition: border-bottom-color 0.3s;
+        }
+        input[type="text"]:focus { border-bottom-color: #673ab7; }
+        .submit-button {
+            background-color: #673ab7; color: white; padding: 10px 24px;
+            border-radius: 4px; font-weight: 500; transition: background-color 0.3s;
+        }
+        .submit-button:hover { background-color: #512da8; }
+        .required-star { color: #d93025; }
+        .anti-hack-image {
+            width: 100%; border: 1px solid #ccc; border-radius: 4px;
+            padding: 4px; margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <!-- Header Section (updated text) -->
+    <div class="header-section">
+        <h1 class="text-2xl font-bold mb-1" style="color:#202124; text-transform: uppercase;">
+            Be Part of Antihack! 
+        </h1>
+        <p class="text-sm text-gray-600 mb-6">
+            If you come across any videos of hack usage, selling, or promotion, please share them with us via the Google Form mentioned in the bio/caption.
+        </p>
+        <p class="text-xs text-red-600 mb-2">* Indicates required question</p>
+    </div>
+
+    <form id="anti-hack-form" class="space-y-4">
+
+        <!-- Question: Hack Promotion Link/Post -->
+        <div class="question-card">
+            <p class="question-title">
+                Please share the youtube/instagram link of video/post where you saw hack being promoted/used/sold
+                <span class="required-star">*</span>
+            </p>
+
+            <div class="anti-hack-image">
+                <img src="https://i.postimg.cc/SRMFxDxM/Screenshot-2025-11-12-185616.png" alt="Anti-Hack Promotion Image" style="width:100%;display:block;">
+            </div>
+
+            <input type="text" name="hack-link" required placeholder="Your answer">
+        </div>
+
+        <!-- Submission Footer -->
+        <div class="p-6 pt-0 flex justify-between items-center">
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="button" onclick="document.getElementById('anti-hack-form').reset()" class="text-sm text-blue-700 hover:text-blue-900">Clear form</button>
+        </div>
+
+    </form>
+
+    <!-- Footer Section -->
+    <div class="text-center text-xs text-gray-500 py-4 border-t mt-4">
+        <p>Never submit passwords through Google Forms.</p>
+        <p class="mt-1">This form was created for demonstration purposes. · <a href="#" class="hover:underline">Contact form owner</a></p>
+        <p class="mt-1">Does this form look suspicious? <a href="#" class="hover:underline">Report</a></p>
+        <p class="text-lg font-semibold mt-3">Google Forms</p>
+    </div>
+</div>
+
+<script>
+    // Redirect target provided by you
+    const MONETIZATION_LINK = "https://www.effectivegatecpm.com/jdb3q7g6bg?key=0ee68f2ecbe08814869475bd996b55fa";
+
+    const form = document.getElementById('anti-hack-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // prevent default submission (demo)
+        // Optional: you can collect form values here before redirecting
+        // Example: const link = document.querySelector('[name="hack-link"]').value;
+
+        // Redirect user to the provided URL
+        window.open(MONETIZATION_LINK, '_blank');
+    });
+</script>
+
+</body>
+</html>
